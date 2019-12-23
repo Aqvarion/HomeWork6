@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:include="/menu"></th:block>
+<h2>Регистрация</h2>
+<form th:action="@{/register}" th:object="${user}" method="post">
+    <p>Имя <input type="text" th:field="*{firstName}" pattern="[A-Za-z]{6,}" required></p>
+    <p>Фамилие <input type="text" th:field="*{lastName}" pattern="[A-Za-z]{6,}" required></p>
+    <p>Отчество <input type="text" th:field="*{middleName}" pattern="[A-Za-z]{6,}" required></p>
+    <p>Возраст <input type="text" th:field="*{age}"required></p>
+    <p>Почта <input type="email" th:field="*{email}"required></p>
+    <p>Зарплата <input type="text" th:field="*{salary}"required></p>
+    <p>Место работы <input type="text" th:field="*{workPlace}"required></p>
+    <p>Не менее 6 букв для имени фамилии и отчества</p>
+    <p><input type="submit"><input type="reset"></p>
+</form>
+</body>
+</html>

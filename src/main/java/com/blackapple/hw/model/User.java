@@ -1,6 +1,19 @@
 package com.blackapple.hw.model;
 
 public class User {
+    @Override
+    public String toString() {
+        return  "User{"+
+                "lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", email='" + email + '\'' +
+                ", workPlace='" + workPlace + '\''
+                +"}";
+    }
+
     public String getLastName() {
         return lastName;
     }

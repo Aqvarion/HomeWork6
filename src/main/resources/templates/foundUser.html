@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:include="/menu"></th:block>
+<div th:if="${user!=null}">
+    <p>Пользователь найден</p>
+    <p th:text="${user}"/>
+</div>
+<div th:if="${user==null}">
+    <p>Пользователь не найден<p>
+</div>
+<a th:href="@{/search}">Вернуться к поиску</a>
+</body>
+</html>

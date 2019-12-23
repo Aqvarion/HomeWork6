@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:include="/menu"></th:block>
+<tr>
+    <th></th>
+</tr>
+<tr th:each ="member : ${members}">
+    <td th:text="${member}"> </td>
+</tr>
+</body>
+</html>
